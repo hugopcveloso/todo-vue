@@ -15,8 +15,14 @@
     {
       "text": "teste",
       "day": "asdfasd",
-      "reminder": false,
+      "reminder": true,
       "id": 5
+    },
+    {
+      "text": "what's up",
+      "day": "15 hours",
+      "reminder": true,
+      "id": 6
     }
   ]
 }

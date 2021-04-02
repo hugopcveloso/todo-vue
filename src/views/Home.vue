@@ -39,7 +39,7 @@ export default {
           ...task,
         })
         .then((res) => res.data)
-        .catch((error) => console.log(error));
+        .catch((error) => alert(error));
       return (this.tasks = [...this.tasks, data]);
     },
     async deleteTask(id) {
@@ -64,7 +64,7 @@ export default {
       const data = await axios
         .put(`api/tasks/${id}`, updTask)
         .then((res) => res.data)
-        .catch((err) => console.log(err));
+        .catch((err) => alert(err));
 
       this.tasks = this.tasks.map((task) => {
         if (task.id === id) {
@@ -78,7 +78,7 @@ export default {
       const res = axios
         .get("/api/tasks")
         .then((res) => res.data)
-        .catch((error) => console.log(error));
+        .catch((err) => alert(err));
 
       //const data = await res.json();
       return res;
@@ -87,7 +87,7 @@ export default {
       const res = axios
         .get(`/api/tasks/${id}`)
         .then((res) => res.data)
-        .catch((error) => console.log(error));
+        .catch((err) => alert(err));
       //const data = await res.json();
       return res;
     },
